@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .counter {
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            background-color: #4C437C;
+            color: white;
+            border-radius: 10px;
+        }
+
+        .counter h4,
+        p {
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .counter button {
+            border: none;
+            background-color: #384e57;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 10px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="counter">
+        <h4>Counter App</h4>
+        <p id="count">0</p>
+        <button onclick="incrementFun()" id="increment">Increment</button>
+        <button onclick="decrementFun()" id="decrement">Decrement</button>
+    </div>
+
+    <script>
+        let count = 0;
+        // const increment = document.getElementById("increment");
+        // const decrement = document.getElementById("decrement");
+        const countElement = document.getElementById("count");
+
+        function incrementFun() {
+            count++;
+            countElement.innerText = count;
+        }
+
+        function decrementFun() {
+            count--;
+            countElement.innerText = count;
+        }
+
+    </script>
+</body>
+
+</html>
